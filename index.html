@@ -5,11 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Sean's Movie App</title>
 </head>
 <body>
-    
+    <!--
+        Need a nav section where we'll have a form that is displayed in the upper right hand corner
+        Beneate that there should be an unordered list section
+            -- On initial page load, fill the page with random movies
+                -- Within each movie li, need the image of the movie, movie title, movie rating, and the overview of the movie
+        
+        When a user searches for a keyword, need to reach out to the API with the keyword and get back a list of new movies
+            -- Will need to wipe clear whatever movies are currently on the page and replace with movies from the response we get back
+                -- For each page load, only populate the first 15 movies from the response
 
+
+    -->
+
+    <nav>
+        <form id="form" class="form">
+            <input type="text" name="movie" placeholder="Search">
+            <label name="movie"></label>
+        </form>
+    </nav>
+
+    <main>
+        <ul id="movie_list" class="movie_list">
+
+        </ul>
+    </main>
 
     <script src="script.js"></script>
 </body>

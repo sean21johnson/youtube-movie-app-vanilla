@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 10px;
+    background-color: rgb(78, 0, 223);
+}
+
+input {
+    border-radius: 20px;
+    padding: 12px;
+    outline: none;
+}
