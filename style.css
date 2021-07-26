@@ -60,3 +60,15 @@ p.rating {
 .overview_details {
     width: 250px;
 }
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.orange {
+    background-color: orange;
+}

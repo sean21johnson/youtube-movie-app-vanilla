@@ -76,9 +76,14 @@ function displayMovies(movies) {
                 <div class="poster_container">
                     <img src="${IMGPATH}${movie.poster_path}" alt="poster">
                 </div>
+
+
                 <div class="title_rating">
                     <h2>${movie.original_title}</h2>
-                    <p class="rating">${movie.vote_average}</p>
+
+                    ${getRatingElement(movie.vote_average)}
+
+
                 </div>
                 <div class="overview_section">
                     <button onclick="handleOverviewExpansion('${i}')" class="overview_button">Overview</button> 
@@ -89,6 +94,24 @@ function displayMovies(movies) {
             </li>
         `;
 	});
+}
+
+function getRatingElement(rating) {
+    let ratingHtml = "";
+
+    // 8 or above it's green
+    // 5 - 8 is orange
+    // less than 5 is red
+
+    if (rating >= 8) {
+        ratingHtml = `<p class="rating green">${rating}</p>`
+    } else if (rating >= 5 && rating < 8) {
+        ratingHtml = `<p class="rating orange">${rating}</p>`
+    } else {
+        ratingHtml = `<p class="rating red">${rating}</p>`
+    }
+
+    return ratingHtml
 }
 
 function handleOverviewExpansion(index) {
